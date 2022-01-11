@@ -1,9 +1,11 @@
 ---
-lang: zh-CN
-title: 页面的标题
-description: 页面的描述
+home: true
+heroText: null
+tagline: null
+title: 首页
+footer: Copyright © 2021 ZT
 ---
 
-# Hello World!
+# Hello!
 
-test
+This is My Blog
