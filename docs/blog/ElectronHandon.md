@@ -6,7 +6,7 @@
 
 ## 安装
 
-```
+```bash
 npm install electron --save-dev
 ```
 
@@ -14,16 +14,16 @@ npm install electron --save-dev
 
 研究了一下发现原来是下载失败了，更换淘宝镜像然后就可以了
 
-```
+```bash
 npm config set registry https://registry.npmmirror.com
 ```
 
-```
+```bash
 ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
 ```
 
 怎么还是怎么慢，又研究一番后发现把 electron 也设置成淘宝源就立马完成了。
-参考链接 https://www.jianshu.com/p/73f33d48c0af
+参考链接 <https://www.jianshu.com/p/73f33d48c0af>
 
 ## 写个 demo
 
@@ -77,7 +77,7 @@ package.json 中添加
 
 运行
 
-```
+```bash
 npm run start
 ```
 
@@ -87,7 +87,7 @@ npm run start
 
 安装
 
-```
+```bash
 npm install --save-dev @electron-forge/cli
 npx electron-forge import
 ```
