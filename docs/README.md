@@ -9,9 +9,9 @@ footer: Copyright © 2021 - 2022 ZT
 <div style="text-align: center; margin-top: 30px">
 <img :src="$withBase('/assets/hero.svg')" alt="heroImg">
 
-# 嗨! 这是我的博客
+<h1>嗨! 这是我的博客</h1>
 
-很高兴遇见你 😊
+<p>很高兴遇见你 😊</p>
 
 </div>
 
