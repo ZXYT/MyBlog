@@ -27,7 +27,11 @@ export default defineUserConfig<DefaultThemeOptions>({
         children: [
           {
             text: "上手",
-            children: ["/blog/ElectronHandon.md", "/blog/PiniaHandon.md"],
+            children: [
+              "/blog/ElectronHandon.md",
+              "/blog/PiniaHandon.md",
+              "/blog/TailWindHondon.md",
+            ],
           },
         ],
       },
@@ -41,7 +45,11 @@ export default defineUserConfig<DefaultThemeOptions>({
         {
           text: "热门项目上手",
           // collapsible: true,
-          children: ["/blog/ElectronHandon.md", "/blog/PiniaHandon.md"],
+          children: [
+            "/blog/ElectronHandon.md",
+            "/blog/PiniaHandon.md",
+            "/blog/TailWindHondon.md",
+          ],
         },
       ],
     },
