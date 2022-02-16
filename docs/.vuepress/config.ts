@@ -22,9 +22,29 @@ export default defineUserConfig<DefaultThemeOptions>({
     logo: "/assets/logo.svg",
     navbar: [
       "/",
-      { text: "笔记", link: "/blog" },
-      { text: "项目", link: "/project" },
+      {
+        text: "笔记",
+        children: [
+          {
+            text: "上手",
+            children: ["/blog/ElectronHandon.md", "/blog/PiniaHandon.md"],
+          },
+        ],
+      },
+      {
+        text: "项目",
+        children: ["/project/Schedule.md"],
+      },
     ],
+    sidebar: {
+      "/blog": [
+        {
+          text: "热门项目上手",
+          // collapsible: true,
+          children: ["/blog/ElectronHandon.md", "/blog/PiniaHandon.md"],
+        },
+      ],
+    },
     repo: "https://github.com/ZXYT/myblog",
     editLink: false,
   },

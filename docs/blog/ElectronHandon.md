@@ -1,4 +1,4 @@
-# 上手 electron
+# Electron 上手
 
 ## 背景
 
@@ -97,6 +97,7 @@ npx electron-forge import
 
 ## 链接
 
+<https://www.electronjs.org/zh/docs/latest/tutorial/quick-start>
 <https://github.com/electron/i18n/tree/master/content/zh-CN>
 <https://zhuanlan.zhihu.com/p/27740025>\
 <https://zhuanlan.zhihu.com/p/399390542>
