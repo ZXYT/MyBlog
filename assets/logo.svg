@@ -1,0 +1,5 @@
+<svg width="204" height="204" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M202 42V2H2v40m200 0L2 162M202 42v40l-65 40M2 162v-40l67.5-40M2 162v40h200v-40M2 42h135L69.5 82M2 42v40h67.5M202 162H69.5l67.5-40m65 40v-40h-65"
+    stroke="#A9A9A9" stroke-width="4" />
+</svg>
