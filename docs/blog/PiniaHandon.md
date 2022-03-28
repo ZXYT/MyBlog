@@ -10,7 +10,7 @@
 npm i pinia
 ```
 
-如果在中使用还需要安装 @vue/composition-api。
+如果在 Vue2 中使用还需要安装 @vue/composition-api。
 
 ```bash
 npm i @vue/composition-api
@@ -88,7 +88,7 @@ const { increment, asyncfn } = counter;
 **Options API**
 
 ```ts
-import { storeToRefs, mapActions, mapState } from "pinia";
+import { mapActions, mapState } from "pinia";
 import { useCounterStore } from "../store/module/counter";
 
 export default {
@@ -102,6 +102,75 @@ export default {
 ```
 
 更多使用细节可以阅读官方文档[官方文档](https://pinia.vuejs.org/)
+
+## 常见问题
+
+##### 在 Vue Cli 中使用出现 Can't import the named export 'computed' from non EcmaScript module (only default export is available) 等问题如下图
+
+```bash
+ERROR  Failed to compile with 18 errors
+
+ error  in ./node_modules/pinia/dist/pinia.mjs
+
+Can't import the named export 'computed' from non EcmaScript module (only default export is available)
+
+ error  in ./node_modules/pinia/dist/pinia.mjs
+
+Can't import the named export 'del' from non EcmaScript module (only default export is available)
+
+...
+
+```
+
+###### 可能原因
+
+第三方包没有导出对应版本的包
+
+##### 解决办法
+
+- 修改 vue.config.js 配置
+
+```js
+// vue.config.js
+module.exports = {
+  // 导出对象
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+          test: /\.mjs$/,
+          include: /node_modules/,
+          type: "javascript/auto"
+        }
+      ]
+    }
+  }
+ // 导出函数
+  configureWebpack: config => {
+    config.module.rules.push({
+      test: /\.mjs$/,
+      include: /node_modules/,
+      type: 'javascript/auto',
+    })
+  }
+}
+```
+
+###### 可选步骤
+
+- 更新 typescript 版本
+- 跳过第三方包检查
+
+```json
+{
+  "compilerOptions": {
+
+ 	  ...
+
+    "skipLibCheck": true
+  }
+}
+```
 
 ## 参考链接
 
