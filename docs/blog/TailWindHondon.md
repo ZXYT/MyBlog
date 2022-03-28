@@ -31,6 +31,8 @@ module.exports = {
 
 ### 在项目在引入
 
+此次以 Vue 为例，其他框架类型
+
 ```ts
 // main.ts
 import { createApp } from "vue";
@@ -47,3 +49,7 @@ createApp(App).mount("#app");
   <h1 class="text-3xl font-bold underline">Hello world!</h1>
 </template>
 ```
+
+## 链接
+
+[官方文档](https://tailwindcss.com/)
